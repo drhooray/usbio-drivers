@@ -490,9 +490,8 @@ static int usbio_gpio_probe(struct platform_device *pdev)
 	return devm_gpiochip_add_data(&pdev->dev, &usbio_gpio->gc, usbio_gpio);
 }
 
-static int usbio_gpio_remove(struct platform_device *pdev)
+static void usbio_gpio_remove(struct platform_device *pdev)
 {
-	return 0;
 }
 
 static struct platform_driver usbio_gpio_driver = {
